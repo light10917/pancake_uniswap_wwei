@@ -115,17 +115,17 @@
       "logoURI": "https://pancakeswap.finance/images/tokens/0xA7f552078dcC247C2684336020c03648500C6d9F.png"
     },
     {
-      "name": "PancakeSwap Token",
-      "symbol": "CAKE",
-      "address": "0xFa60D973F7642B748046464e165A65B7323b0DEE",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "address": "0x19297aF63331472a65A511061aCa701c5a083124",
       "chainId": 97,
       "decimals": 18,
-      "logoURI": "https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
     },
     {
-      "name": "BUSD Token",
-      "symbol": "BUSD",
-      "address": "0xaB1a4d4f1D656d2450692D237fdD6C7f9146e814",
+      "name": "FDO Token",
+      "symbol": "FDO",
+      "address": "0x82E1A17BC3A15E842Dd7F5fCbbBd661cFd2a5b06",
       "chainId": 97,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/busd.png"
@@ -193,14 +193,6 @@
       "decimals": 6,
       "chainId": 1,
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
-    },
-    {
-      "name": "Wrapped BNB",
-      "symbol": "WBNB",
-      "address": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
-      "chainId": 97,
-      "decimals": 18,
-      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/bnb.png"
     },
     {
       "name": "Wrapped BTC",

@@ -89,7 +89,7 @@ const config: (
     },
     {
       label: t('Order'),
-      href: '/farms',
+      href: '/order',
       icon: NavOrder,
       fillIcon: NavOrderFill,
       showItemsOnMobile:false,
@@ -109,7 +109,7 @@ const config: (
     },
     {
       label: t('Swap'),
-      href: '/farms',
+      href: '/liquidity',
       icon: NavSwap,
       fillIcon: NavSwapFill,
       showItemsOnMobile:false,
