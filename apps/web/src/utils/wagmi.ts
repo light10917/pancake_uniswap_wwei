@@ -36,6 +36,7 @@ const getNodeRealUrl = (networkName: string) => {
     return null
   }
 
+  console.log({host})
   const url = `https://${host}`
   return {
     http: url,
