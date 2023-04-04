@@ -127,7 +127,7 @@
       "symbol": "FDO",
       "address": "0x82E1A17BC3A15E842Dd7F5fCbbBd661cFd2a5b06",
       "chainId": 97,
-      "decimals": 18,
+      "decimals": 8,
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/busd.png"
     },
     {

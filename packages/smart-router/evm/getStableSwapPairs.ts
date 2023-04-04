@@ -7,6 +7,7 @@ import { getStableSwapPools } from './constants/stableSwap'
 import { STABLE_SUPPORTED_CHAIN_IDS } from './constants/stableSwap/pools'
 
 export function getStableSwapPairs(chainId: ChainId): StableSwapPair[] {
+  return []
   const pools = getStableSwapPools(chainId)
   return pools.map(
     ({
