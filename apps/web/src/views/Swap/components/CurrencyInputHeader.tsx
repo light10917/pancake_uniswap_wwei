@@ -1,16 +1,12 @@
 import { useTranslation } from '@pancakeswap/localization'
 import {
-  ChartDisableIcon,
-  ChartIcon,
   Flex,
   HistoryIcon,
-  HotDisableIcon,
-  HotIcon,
+  LinkIcon,
   IconButton,
   NotificationDot,
   Swap,
   Text,
-  TooltipText,
   useModal,
   useTooltip,
 } from '@pancakeswap/uikit'
@@ -91,15 +87,27 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
   }, [mobileTooltipClickOutside])
 
   const titleContent = (
-    <Flex width="100%" alignItems="center" justifyContent="space-between" flexDirection="column">
-      <Flex flexDirection="column" alignItems="flex-start" width="100%" marginBottom={15}>
+    <Flex width="100%" alignItems="center" justifyContent="space-between">
+      {/* <Flex flexDirection="row" alignItems='center' justifyContent="space-between" width="100%" marginBottom={0}> */}
         <Swap.CurrencyInputHeaderTitle>{title}</Swap.CurrencyInputHeaderTitle>
-      </Flex>
-      <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
+        <Flex alignContent="center" style={{gap:5}} justifyContent="space-between">
+
+        <NotificationDot show={expertMode}>
+          <GlobalSettings mode={SettingsMode.SWAP_LIQUIDITY} />
+        </NotificationDot>
+        <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
+          <HistoryIcon width="18px" />
+        </IconButton>
+        <IconButton variant="text" scale="sm" onClick={null}>
+          <LinkIcon width="20px" />
+        </IconButton>
+        </Flex>
+      {/* </Flex> */}
+      {/* <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
         <Swap.CurrencyInputHeaderSubTitle>{subtitle}</Swap.CurrencyInputHeaderSubTitle>
-      </Flex>
-      <Flex width="100%" justifyContent="end">
-        {/* <V3SwapPromotionIcon /> */}
+      </Flex> */}
+      {/* <Flex width="100%" justifyContent="end">
+        <V3SwapPromotionIcon />
         {isChartSupported && setIsChartDisplayed && (
           <ColoredIconButton
             onClick={() => {
@@ -149,7 +157,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
         <IconButton variant="text" scale="sm" onClick={handleOnClick}>
           <RefreshIcon disabled={!hasAmount} color="textSubtle" width="27px" />
         </IconButton>
-      </Flex>
+      </Flex> */}
     </Flex>
   )
 
@@ -157,3 +165,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
 }
 
 export default CurrencyInputHeader
+
+const sss = styled.div`
+
+`

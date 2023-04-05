@@ -198,7 +198,7 @@ export function AdvancedSwapDetails({
             hasStablePair={hasStablePair}
             isMM={isMM}
           />
-          {showRoute && (
+          {/* {showRoute && (
             <>
               <RowBetween style={{ padding: '0 16px' }}>
                 <span style={{ display: 'flex', alignItems: 'center' }}>
@@ -238,7 +238,7 @@ export function AdvancedSwapDetails({
                 </ModalV2>
               </RowBetween>
             </>
-          )}
+          )} */}
         </>
       )}
     </AutoColumn>

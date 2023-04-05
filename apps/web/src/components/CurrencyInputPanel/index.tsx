@@ -43,18 +43,19 @@ const LabelRow = styled.div`
   color: ${({ theme }) => theme.colors.text};
   font-size: 0.75rem;
   line-height: 1rem;
-  padding: 0.75rem 1rem 0 1rem;
+  padding: 15px 20px 20px;
 `
 const InputPanel = styled.div`
   display: flex;
   flex-flow: column nowrap;
   position: relative;
+  overflow: hidden;
+  border-radius: 8px;
   background-color: ${({ theme }) => theme.colors.backgroundAlt};
   z-index: 1;
 `
 const Container = styled.div<{ zapStyle?: ZapStyle; error?: boolean }>`
-  border-radius: 16px;
-  background-color: ${({ theme }) => theme.colors.input};
+  background-color: #f0f0f0;
   box-shadow: ${({ theme, error }) => theme.shadows[error ? 'warning' : 'inset']};
   ${({ zapStyle }) =>
     !!zapStyle &&
@@ -170,40 +171,8 @@ export default function CurrencyInputPanel({
       <Flex alignItems="center" justifyContent="space-between">
         <Flex>
           {beforeButton}
-          <CurrencySelectButton
-            zapStyle={zapStyle}
-            className="open-currency-select-button"
-            selected={!!currency}
-            onClick={() => {
-              if (!disableCurrencySelect) {
-                onPresentCurrencyModal()
-              }
-            }}
-          >
-            <Flex alignItems="center" justifyContent="space-between">
-              {pair ? (
-                <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={16} margin />
-              ) : currency ? (
-                <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '8px' }} />
-              ) : null}
-              {pair ? (
-                <Text id="pair" bold>
-                  {pair?.token0.symbol}:{pair?.token1.symbol}
-                </Text>
-              ) : (
-                <Text id="pair" bold>
-                  {(currency && currency.symbol && currency.symbol.length > 10
-                    ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
-                        currency.symbol.length - 5,
-                        currency.symbol.length,
-                      )}`
-                    : currency?.symbol) || t('Select a currency')}
-                </Text>
-              )}
-              {!disableCurrencySelect && <ChevronDownIcon />}
-            </Flex>
-          </CurrencySelectButton>
-          {token && tokenAddress ? (
+
+          {/* {token && tokenAddress ? (
             <Flex style={{ gap: '4px' }} ml="4px" alignItems="center">
               <CopyButton
                 width="16px"
@@ -222,25 +191,14 @@ export default function CurrencyInputPanel({
                 tokenLogo={token instanceof WrappedTokenInfo ? token.logoURI : undefined}
               />
             </Flex>
-          ) : null}
+          ) : null} */}
         </Flex>
-        {account && (
-          <Text
-            onClick={!disabled && onMax}
-            color="textSubtle"
-            fontSize="14px"
-            style={{ display: 'inline', cursor: 'pointer' }}
-          >
-            {!hideBalance && !!currency
-              ? t('Balance: %balance%', { balance: selectedCurrencyBalance?.toSignificant(6) ?? t('Loading') })
-              : ' -'}
-          </Text>
-        )}
+        
       </Flex>
       <InputPanel>
         <Container as="label" zapStyle={zapStyle} error={error}>
           <LabelRow>
-            <NumericalInput
+            <NumericalInputIner
               error={error}
               disabled={disabled}
               className="token-amount-input"
@@ -251,8 +209,55 @@ export default function CurrencyInputPanel({
                 setCurrentClickedPercent('')
               }}
             />
+            <Flex flexDirection="column">
+              <CurrencySelectButton
+                zapStyle={zapStyle}
+                className="open-currency-select-button"
+                selected={!!currency}
+                onClick={() => {
+                  if (!disableCurrencySelect) {
+                    onPresentCurrencyModal()
+                  }
+                }}
+              >
+                <Flex alignItems="center" justifyContent="space-between">
+                  {pair ? (
+                    <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={16} margin />
+                  ) : currency ? (
+                    <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '8px' }} />
+                  ) : null}
+                  {pair ? (
+                    <Text id="pair" color='#000' bold>
+                      {pair?.token0.symbol}:{pair?.token1.symbol}
+                    </Text>
+                  ) : (
+                    <Text id="pair" color='#000' bold>
+                      {(currency && currency.symbol && currency.symbol.length > 10
+                        ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
+                            currency.symbol.length - 5,
+                            currency.symbol.length,
+                          )}`
+                        : currency?.symbol) || t('Select a currency')}
+                    </Text>
+                  )}
+                  {/* {!disableCurrencySelect && <ChevronDownIcon color='red'/>} */}
+                </Flex>
+              </CurrencySelectButton>
+              {account && (
+          <Text
+            onClick={!disabled && onMax}
+            color="#848484"
+            fontSize="14px"
+            style={{ display: 'inline', cursor: 'pointer' }}
+          >
+            {!hideBalance && !!currency
+              ? t('Balance: %balance%', { balance: selectedCurrencyBalance?.toSignificant(6) ?? t('Loading') })
+              : ' -'}
+          </Text>
+        )}
+            </Flex>
           </LabelRow>
-          {!!currency && showUSDPrice && (
+          {/* {!!currency && showUSDPrice && (
             <Flex justifyContent="flex-end" mr="1rem">
               <Flex maxWidth="200px">
                 {Number.isFinite(amountInDollar) ? (
@@ -264,8 +269,8 @@ export default function CurrencyInputPanel({
                 )}
               </Flex>
             </Flex>
-          )}
-          <InputRow selected={disableCurrencySelect}>
+          )} */}
+          {/* <InputRow selected={disableCurrencySelect}>
             {account && currency && selectedCurrencyBalance?.greaterThan(0) && !disabled && label !== 'To' && (
               <Flex alignItems="right" justifyContent="right">
                 {maxAmount?.greaterThan(0) &&
@@ -310,10 +315,16 @@ export default function CurrencyInputPanel({
                 )}
               </Flex>
             )}
-          </InputRow>
+          </InputRow> */}
         </Container>
         {disabled && <Overlay />}
       </InputPanel>
     </Box>
   )
 }
+
+const NumericalInputIner = styled(NumericalInput)`
+  color: #000;
+  font-size: 22px;
+  text-align: left;
+`

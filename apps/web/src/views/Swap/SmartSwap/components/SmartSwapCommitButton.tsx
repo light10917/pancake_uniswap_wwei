@@ -21,6 +21,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { Field } from 'state/swap/actions'
 import { useUserSingleHopOnly } from 'state/user/hooks'
 import { warningSeverity } from 'utils/exchange'
+import styled from 'styled-components'
 import ProgressSteps from '../../components/ProgressSteps'
 import { SwapCallbackError } from '../../components/styleds'
 import { useSwapCallArguments } from '../hooks/useSwapCallArguments'
@@ -216,7 +217,7 @@ export default function SwapCommitButton({
   }
 
   if (!account) {
-    return <ConnectWalletButton width="100%" />
+    return <ConnectWalletButtonBtn width="100%" />
   }
 
   if (showWrap) {
@@ -235,10 +236,10 @@ export default function SwapCommitButton({
 
   if (noRoute && userHasSpecifiedInputOutput) {
     return (
-      <GreyCard style={{ textAlign: 'center', padding: '0.75rem' }}>
-        <Text color="textSubtle">{t('Insufficient liquidity for this trade.')}</Text>
-        {singleHopOnly && <Text color="textSubtle">{t('Try enabling multi-hop trades.')}</Text>}
-      </GreyCard>
+      <GreyCardBn style={{ textAlign: 'center', padding: '0.75rem' }}>
+        <Text color="#fff">{t('Insufficient liquidity for this trade.')}</Text>
+        {singleHopOnly && <Text color="#fff">{t('Try enabling multi-hop trades.')}</Text>}
+      </GreyCardBn>
     )
   }
 
@@ -321,3 +322,14 @@ export default function SwapCommitButton({
     </>
   )
 }
+
+const GreyCardBn = styled(GreyCard)`
+  color: #fff;
+  background-color: #a7e107;
+  opacity: 0.8;
+`
+const ConnectWalletButtonBtn = styled(ConnectWalletButton)`
+  border-radius: 48px !important;
+  background-color: #a7e107;
+  color: #fff;
+`

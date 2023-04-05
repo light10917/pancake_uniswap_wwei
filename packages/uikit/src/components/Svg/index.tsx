@@ -180,5 +180,7 @@ export { default as NavOrderFill } from "./Icons/Nav_Order_Fill";
 
 export { default as NavSwap } from "./Icons/Nav_Swap";
 export { default as NavSwapFill } from "./Icons/Nav_Swap_Fill";
+export { default as LinkIcon } from "./Icons/LinkIcon";
+export { default as SwapSwitchIcon } from "./Icons/SwapSwitchIcon";
 
 export type { SvgProps } from "./types";

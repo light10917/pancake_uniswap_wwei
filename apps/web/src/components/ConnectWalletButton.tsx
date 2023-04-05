@@ -9,6 +9,7 @@ import useAuth from 'hooks/useAuth'
 import { useActiveHandle } from 'hooks/useEagerConnect.bmp.ts'
 import { useMemo, useState } from 'react'
 import { useConnect } from 'wagmi'
+import styled from 'styled-components'
 import Trans from './Trans'
 
 const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
@@ -36,9 +37,9 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
 
   return (
     <>
-      <Button onClick={handleClick} {...props}>
+      <ConnectButton onClick={handleClick} {...props}>
         {children || <Trans>Connect Wallet</Trans>}
-      </Button>
+      </ConnectButton>
       <WalletModalV2
         docText={t('Learn How to Connect')}
         docLink={docLink}
@@ -52,3 +53,10 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
 }
 
 export default ConnectWalletButton
+
+const ConnectButton = styled(Button)`
+  background-color: #222125;
+  border: 2px solid #a0d900;
+  border-radius: 5px;
+  color: #a0d900;
+`

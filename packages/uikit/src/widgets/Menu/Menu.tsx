@@ -58,14 +58,16 @@ const TopBannerContainer = styled.div<{ height: number }>`
 const BodyWrapper = styled(Box)`
   position: relative;
   display: flex;
+  align-items:center;
   max-width: 100vw;
+  min-height:75vh;
 `;
 
 const Inner = styled.div`
   flex-grow: 1;
   transition: margin-top 0.2s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translate3d(0, 0, 0);
-  max-width: 100%;
+  /* transform: translate3d(0, 0, 0); */
+  /* max-width: 100%; */
 `;
 
 const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
