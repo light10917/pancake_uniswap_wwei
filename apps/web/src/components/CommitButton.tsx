@@ -34,11 +34,11 @@ export const CommitButton = (props: ButtonProps) => {
 }
 
 const ComitButton = styled(Button)`
-  border-radius: 48px !important;
+  /* border-radius: 48px !important;
 
   background-color: #a7e107;
   :disabled {
     color: #fff;
     background-color: #a7e107;
-  }
+  } */
 `

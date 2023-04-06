@@ -236,10 +236,10 @@ export default function SwapCommitButton({
 
   if (noRoute && userHasSpecifiedInputOutput) {
     return (
-      <GreyCardBn style={{ textAlign: 'center', padding: '0.75rem' }}>
-        <Text color="#fff">{t('Insufficient liquidity for this trade.')}</Text>
-        {singleHopOnly && <Text color="#fff">{t('Try enabling multi-hop trades.')}</Text>}
-      </GreyCardBn>
+      <GreyCard style={{ textAlign: 'center', padding: '0.75rem' }}>
+        <Text color="#BDBDBD">{t('Insufficient liquidity for this trade.')}</Text>
+        {singleHopOnly && <Text color="#BDBDBD">{t('Try enabling multi-hop trades.')}</Text>}
+      </GreyCard>
     )
   }
 
@@ -323,11 +323,6 @@ export default function SwapCommitButton({
   )
 }
 
-const GreyCardBn = styled(GreyCard)`
-  color: #fff;
-  background-color: #a7e107;
-  opacity: 0.8;
-`
 const ConnectWalletButtonBtn = styled(ConnectWalletButton)`
   border-radius: 48px !important;
   background-color: #a7e107;

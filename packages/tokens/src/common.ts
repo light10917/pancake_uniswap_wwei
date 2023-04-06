@@ -9,10 +9,18 @@ export const CAKE_MAINNET = new ERC20Token(
   'https://pancakeswap.finance/',
 )
 
+export const USDT_TESTNET= new ERC20Token(
+  ChainId.BSC_TESTNET,
+  '0x19297aF63331472a65A511061aCa701c5a083124',
+  18,
+  'CAKE',
+  'PancakeSwap Token',
+  'https://pancakeswap.finance/',
+) 
 export const CAKE_TESTNET = new ERC20Token(
   ChainId.BSC_TESTNET,
   '0x82E1A17BC3A15E842Dd7F5fCbbBd661cFd2a5b06',
-  18,
+  8,
   'CAKE',
   'PancakeSwap Token',
   'https://pancakeswap.finance/',
@@ -127,7 +135,7 @@ export const USDC = {
 
 export const USDT = {
   [ChainId.BSC]: USDT_BSC,
-  [ChainId.ETHEREUM]: USDT_ETH,
+  [ChainId.BSC_TESTNET]: USDT_TESTNET,
 }
 
 export const WBTC_ETH = new ERC20Token(

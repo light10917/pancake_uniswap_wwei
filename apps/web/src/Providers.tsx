@@ -11,11 +11,8 @@ import { HistoryManagerProvider } from 'contexts/HistoryContext'
 
 const StyledUIKitProvider: React.FC<React.PropsWithChildren> = ({ children, ...props }) => {
   const { resolvedTheme } = useNextTheme()
-  console.log({resolvedTheme})
   return (
-    <UIKitProvider theme={dark} {...props}>
-
-    {/* <UIKitProvider theme={resolvedTheme === 'light' ? light:dark} {...props}> */}
+   <UIKitProvider theme={resolvedTheme === 'light' ? light:dark} {...props}>
       {children}
     </UIKitProvider>
   )
@@ -28,7 +25,7 @@ const Providers: React.FC<React.PropsWithChildren<{ store: Store; children: Reac
   return (
     <WagmiProvider client={client}>
       <Provider store={store}>
-        <NextThemeProvider>
+        <NextThemeProvider defaultTheme='dark'>
           <StyledUIKitProvider>
             <LanguageProvider>
               <SWRConfig

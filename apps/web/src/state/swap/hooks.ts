@@ -1,6 +1,6 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { Currency, CurrencyAmount, Price, Trade, TradeType } from '@pancakeswap/sdk'
-import { CAKE, USDC } from '@pancakeswap/tokens'
+import { CAKE, USDT } from '@pancakeswap/tokens'
 import { equalsIgnoreCase } from '@pancakeswap/utils/equalsIgnoreCase'
 import tryParseAmount from '@pancakeswap/utils/tryParseAmount'
 import IPancakePairABI from 'config/abi/IPancakePair.json'
@@ -209,8 +209,9 @@ export function queryParametersToSwapState(
   parsedQs: ParsedUrlQuery,
   nativeSymbol?: string,
   defaultOutputCurrency?: string,
+  defaultInputCurrency?:string 
 ): SwapState {
-  let inputCurrency = isAddress(parsedQs.inputCurrency) || (nativeSymbol ?? DEFAULT_INPUT_CURRENCY)
+  let inputCurrency = isAddress(parsedQs.inputCurrency) || (defaultInputCurrency  ?? nativeSymbol ?? DEFAULT_INPUT_CURRENCY)
   let outputCurrency =
     typeof parsedQs.outputCurrency === 'string'
       ? isAddress(parsedQs.outputCurrency) || nativeSymbol
@@ -254,7 +255,7 @@ export function useDefaultsFromURLSearch():
 
   useEffect(() => {
     if (!chainId || !native) return
-    const parsed = queryParametersToSwapState(query, native.symbol, CAKE[chainId]?.address ?? USDC[chainId]?.address)
+    const parsed = queryParametersToSwapState(query, native.symbol, CAKE[chainId]?.address , USDT[chainId]?.address)
 
     dispatch(
       replaceSwapState({

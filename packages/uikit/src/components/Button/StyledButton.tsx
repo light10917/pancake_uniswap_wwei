@@ -47,8 +47,8 @@ const StyledButton = styled.button<BaseButtonProps>`
   position: relative;
   align-items: center;
   border: 0;
-  border-radius: 5px;
-  box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
+  border-radius: 24px;
+  box-shadow: 0px -1px 0px 0px rgba(167, 225, 7, .4) inset;
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;

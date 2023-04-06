@@ -55,8 +55,8 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
 export default ConnectWalletButton
 
 const ConnectButton = styled(Button)`
-  background-color: #222125;
+  /* background-color: #222125;
   border: 2px solid #a0d900;
   border-radius: 5px;
-  color: #a0d900;
+  color: #a0d900; */
 `
