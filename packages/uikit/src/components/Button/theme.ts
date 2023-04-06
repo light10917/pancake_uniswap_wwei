@@ -56,7 +56,7 @@ export const styleVariants = {
   },
   [variants.LIGHT]: {
     backgroundColor: "input",
-    color: "textSubtle",
+    color: "text",
     boxShadow: "none",
   },
   [variants.BUBBLEGUM]: {

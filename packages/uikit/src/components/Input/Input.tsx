@@ -44,7 +44,7 @@ const Input = styled.input<InputProps>`
   padding: 0 16px;
   width: 100%;
   border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
-
+  border:none;
   &::placeholder {
     color: ${({ theme }) => theme.colors.textSubtle};
   }
@@ -67,6 +67,7 @@ const Input = styled.input<InputProps>`
       }
       return theme.shadows.focus;
     }};
+    box-shadow:none;
   }
 `;
 

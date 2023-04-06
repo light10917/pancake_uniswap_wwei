@@ -47,6 +47,7 @@ export const Handle = styled.div<HandleProps>`
   top: ${getScale("handleTop")};
   transition: left 200ms ease-in;
   width: ${getScale("handleWidth")};
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   z-index: 1;
 `;
 
@@ -63,11 +64,11 @@ export const Input = styled.input<InputProps>`
   }
 
   &:focus + ${Handle} {
-    box-shadow: ${({ theme }) => theme.shadows.focus};
+    /* box-shadow: ${({ theme }) => theme.shadows.focus}; */
   }
 
   &:hover + ${Handle}:not(:disabled):not(:checked) {
-    box-shadow: ${({ theme }) => theme.shadows.focus};
+    /* box-shadow: ${({ theme }) => theme.shadows.focus}; */
   }
 `;
 

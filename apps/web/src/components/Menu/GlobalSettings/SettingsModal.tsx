@@ -195,7 +195,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
         {mode === SettingsMode.SWAP_LIQUIDITY && (
           <>
             <Flex pt="3px" flexDirection="column">
-              <Text bold textTransform="uppercase" fontSize="18px" color="secondary" mb="24px">
+              <Text bold textTransform="uppercase" fontSize="18px" color="secondary" >
                 {t('Swaps & Liquidity')}
               </Text>
               <Flex justifyContent="space-between" alignItems="center" mb="24px">
@@ -274,7 +274,7 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
                   ml="4px"
                 />
               </Flex>
-              <PancakeToggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" />
+              <Toggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" />
             </Flex>
             <Flex justifyContent="space-between" alignItems="center" mb="24px">
               <Flex alignItems="center">

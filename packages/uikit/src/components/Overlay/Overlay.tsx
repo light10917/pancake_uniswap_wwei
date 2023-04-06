@@ -29,6 +29,7 @@ const StyledOverlay = styled(Box)<{ isUnmounting?: boolean }>`
   background-color: ${({ theme }) => `${theme.colors.text99}`};
   z-index: 20;
   will-change: opacity;
+  backdrop-filter: blur(4.07742px);
   animation: ${mountAnimation} 350ms ease forwards;
   ${({ isUnmounting }) =>
     isUnmounting &&

@@ -129,12 +129,13 @@ export const CAKE = {
 export const USDC = {
   [ChainId.BSC]: USDC_BSC,
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
-  [ChainId.ETHEREUM]: USDC_ETH,
+  [ChainId.ETHEREUM]: USDT_ETH,
   [ChainId.GOERLI]: USDC_GOERLI,
 }
 
 export const USDT = {
   [ChainId.BSC]: USDT_BSC,
+  [ChainId.ETHEREUM]: USDT_TESTNET,
   [ChainId.BSC_TESTNET]: USDT_TESTNET,
 }
 

@@ -92,43 +92,46 @@ const SlippageTabs = () => {
         </Flex>
         <Flex flexWrap="wrap">
           <Button
+            width={56}
             mt="4px"
-            mr="4px"
+            mr="5px"
             scale="sm"
             onClick={() => {
               setSlippageInput('')
               setUserSlippageTolerance(10)
             }}
-            variant={userSlippageTolerance === 10 ? 'primary' : 'tertiary'}
+            variant={userSlippageTolerance === 10 ? 'primary' : 'light'}
           >
             0.1%
           </Button>
           <Button
+            width={56}
             mt="4px"
-            mr="4px"
+            mr="5px"
             scale="sm"
             onClick={() => {
               setSlippageInput('')
               setUserSlippageTolerance(50)
             }}
-            variant={userSlippageTolerance === 50 ? 'primary' : 'tertiary'}
+            variant={userSlippageTolerance === 50 ? 'primary' : 'light'}
           >
             0.5%
           </Button>
           <Button
-            mr="4px"
+            width={56}
+            mr="6px"
             mt="4px"
             scale="sm"
             onClick={() => {
               setSlippageInput('')
               setUserSlippageTolerance(100)
             }}
-            variant={userSlippageTolerance === 100 ? 'primary' : 'tertiary'}
+            variant={userSlippageTolerance === 100 ? 'primary' : 'light'}
           >
             1.0%
           </Button>
           <Flex alignItems="center">
-            <Box width="76px" mt="4px">
+            <Box width="68px" mt="4px">
               <Input
                 scale="sm"
                 inputMode="decimal"
