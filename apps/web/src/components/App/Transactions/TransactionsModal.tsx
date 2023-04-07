@@ -44,7 +44,7 @@ const TransactionsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> =
             <>
               <AutoRow mb="1rem" style={{ justifyContent: 'space-between' }}>
                 <Text>{t('Recent Transactions')}</Text>
-                <Button variant="tertiary" scale="xs" onClick={clearAllTransactionsCallback}>
+                <Button variant="text" scale="xs" onClick={clearAllTransactionsCallback}>
                   {t('clear all')}
                 </Button>
               </AutoRow>

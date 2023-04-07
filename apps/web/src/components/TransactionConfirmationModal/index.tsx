@@ -65,7 +65,7 @@ export function TransactionSubmittedContent({
           )}
           {currencyToAdd && (
             <AddToWalletButton
-              variant="tertiary"
+              variant='light'
               mt="12px"
               width="fit-content"
               marginTextBetweenLogo="6px"
@@ -76,7 +76,7 @@ export function TransactionSubmittedContent({
               tokenLogo={token instanceof WrappedTokenInfo ? token.logoURI : undefined}
             />
           )}
-          <Button onClick={onDismiss} mt="20px">
+          <Button variant='light' onClick={onDismiss} mt="20px">
             {t('Close')}
           </Button>
         </AutoColumn>

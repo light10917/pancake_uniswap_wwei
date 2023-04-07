@@ -46,8 +46,8 @@ const TabMenu: React.FC<React.PropsWithChildren<TabMenuProps>> = ({
       <Inner fullWidth={fullWidth} gap={gap}>
         {Children.map(children, (child: ReactElement, index) => {
           const isActive = activeIndex === index;
-          const color = isActive ? "backgroundAlt" : "textSubtle";
-          const inverseColor = isActive ? "textSubtle" : "backgroundAlt";
+          const color = isActive ? "white" : "textSubtle";
+          const inverseColor = isActive ? "textSubtle" : "white";
           const backgroundColor = isActive ? "textSubtle" : "input";
           const inverseBackgroundColor = isActive ? "input" : "textSubtle";
 

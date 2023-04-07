@@ -140,7 +140,6 @@ const ConfirmSwapModal: React.FC<React.PropsWithChildren<InjectedModalProps & Co
 
   if (!chainId) return null
 
-  
   return (
     <ConfirmSwapModalContainer handleDismiss={handleDismiss}>
       {attemptingTxn ? (

@@ -87,12 +87,13 @@ const TabContainer = ({ children, docLink, docText }: PropsWithChildren<{ docLin
       <AtomBox
         display="flex"
         position="relative"
-        background="gradientCardHeader"
+        background='white'
         borderRadius="card"
-        borderBottomRadius={{
-          xs: '0',
-          md: 'card',
-        }}
+        
+        // borderBottomRadius={{
+        //   xs: '0',
+        //   md: 'card',
+        // }}
         zIndex="modal"
         width="full"
       >
@@ -127,7 +128,7 @@ function MobileModal<T>({
   })
 
   return (
-    <AtomBox width="full">
+    <AtomBox style={{borderRadius:'0 0 16px 16px',overflow:'hidden'}} width="full">
       {error ? (
         <AtomBox
           display="flex"
