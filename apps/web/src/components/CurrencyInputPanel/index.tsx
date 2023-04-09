@@ -211,7 +211,7 @@ export default function CurrencyInputPanel({
             />
             <Flex flexDirection="column">
               <CurrencySelectButton
-                zapStyle={zapStyle}
+                // zapStyle={zapStyle}
                 className="open-currency-select-button"
                 selected={!!currency}
                 onClick={() => {

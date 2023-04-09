@@ -92,7 +92,9 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
       {/* <Flex flexDirection="row" alignItems='center' justifyContent="space-between" width="100%" marginBottom={0}> */}
         <Swap.CurrencyInputHeaderTitle>{title}</Swap.CurrencyInputHeaderTitle>
         <Flex alignContent="center" style={{gap:5}} justifyContent="space-between">
-
+<Link href='/liquidity' marginRight={25}>
+ <Text bold color="#000" fontSize={20}>{t('Liquidity')}</Text> 
+</Link>
         <NotificationDot show={expertMode}>
           <GlobalSettings mode={SettingsMode.SWAP_LIQUIDITY} />
         </NotificationDot>

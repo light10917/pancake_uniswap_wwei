@@ -9,7 +9,7 @@ const StyledLink = styled(Text)<LinkProps>`
   align-items: center;
   width: fit-content;
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 `;
 

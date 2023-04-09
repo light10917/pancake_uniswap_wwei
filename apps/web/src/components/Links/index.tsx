@@ -8,7 +8,7 @@ const StyledInternalLink = styled('a')`
   font-weight: 500;
 
   :hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   :focus {

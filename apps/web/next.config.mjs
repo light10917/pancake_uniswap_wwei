@@ -23,6 +23,7 @@ const sentryWebpackPluginOptions =
         silent: false, // Logging when deploying to check if there is any problem
         validate: true,
         hideSourceMaps: false,
+        
         // https://github.com/getsentry/sentry-webpack-plugin#options.
       }
     : {
@@ -40,7 +41,9 @@ const config = {
   },
   experimental: {
     scrollRestoration: true,
+    outputStandalone:true
   },
+  
   transpilePackages: [
     '@pancakeswap/ui',
     '@pancakeswap/uikit',
@@ -61,14 +64,15 @@ const config = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    contentDispositionType: 'attachment',
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'static-nft.pancakeswap.com',
-        pathname: '/mainnet/**',
-      },
-    ],
+    // contentDispositionType: 'attachment',
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'static-nft.pancakeswap.com',
+    //     pathname: '/mainnet/**',
+    //   },
+    // ],
+    unoptimized:true
   },
   async rewrites() {
     return [

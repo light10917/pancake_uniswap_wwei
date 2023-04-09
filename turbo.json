@@ -4,7 +4,11 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": [".next/**","dist/**"]
+    },
+    "export":{
+      "dependsOn": ["^export"],
+      "outputs": [".next/**","dist/**"]
     },
     "test": {
       "outputs": ["coverage/**"],

@@ -1,4 +1,4 @@
-import { CAKE, USDC } from '@pancakeswap/tokens'
+import { CAKE, USDC, USDT } from '@pancakeswap/tokens'
 import { useCurrency } from 'hooks/Tokens'
 import useNativeCurrency from 'hooks/useNativeCurrency'
 import { GetStaticPaths, GetStaticProps } from 'next'
@@ -20,9 +20,10 @@ const AddLiquidityPage = () => {
   const native = useNativeCurrency()
 
   const [currencyIdA, currencyIdB] = router.query.currency || [
-    native.symbol,
+    USDT[chainId].address ?? native.symbol,
     CAKE[chainId]?.address ?? USDC[chainId]?.address,
   ]
+  console.log({currencyIdA,currencyIdB})
 
   const currencyA = useCurrency(currencyIdA)
   const currencyB = useCurrency(currencyIdB)

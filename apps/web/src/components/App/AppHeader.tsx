@@ -20,7 +20,7 @@ const AppHeaderContainer = styled(Flex)`
   justify-content: space-between;
   padding: 24px;
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  /* border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder}; */
 `
 
 const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({
@@ -56,7 +56,7 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({
             </Flex>
             {!noConfig && (
               <Flex alignItems="center">
-                {IconSlot}
+                {/* {IconSlot} */}
                 <NotificationDot show={expertMode}>
                   <GlobalSettings mode={SettingsMode.SWAP_LIQUIDITY} />
                 </NotificationDot>

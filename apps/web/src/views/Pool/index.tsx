@@ -14,7 +14,7 @@ import { AppHeader, AppBody } from '../../components/App'
 import Page from '../Page'
 
 const Body = styled(CardBody)`
-  background-color: ${({ theme }) => theme.colors.dropdownDeep};
+  /* background-color: ${({ theme }) => theme.colors.dropdownDeep}; */
 `
 
 export default function Pool() {
@@ -78,6 +78,8 @@ export default function Pool() {
     if (allV2PairsWithLiquidity?.length > 0) {
       positionCards = allV2PairsWithLiquidity.map((v2Pair, index) => (
         <FullPositionCard
+        borderBackground="#f1f1f1"
+
           key={v2Pair.liquidityToken.address}
           pair={v2Pair}
           mb={Boolean(stablePairs?.length) || index < allV2PairsWithLiquidity.length - 1 ? '16px' : 0}
@@ -90,6 +92,7 @@ export default function Pool() {
         ...positionCards,
         ...stablePairs?.map((stablePair, index) => (
           <StableFullPositionCard
+          borderBackground="#f1f1f1"
             key={`stable-${stablePair.liquidityToken.address}`}
             pair={stablePair}
             mb={index < stablePairs.length - 1 ? '16px' : 0}
