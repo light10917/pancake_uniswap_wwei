@@ -23,7 +23,7 @@ const AddLiquidityPage = () => {
     USDT[chainId].address ?? native.symbol,
     CAKE[chainId]?.address ?? USDC[chainId]?.address,
   ]
-  console.log({currencyIdA,currencyIdB})
+  // console.log({currencyIdA,currencyIdB})
 
   const currencyA = useCurrency(currencyIdA)
   const currencyB = useCurrency(currencyIdB)
