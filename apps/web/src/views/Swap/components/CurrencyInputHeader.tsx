@@ -90,24 +90,25 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
   const titleContent = (
     <Flex width="100%" alignItems="center" justifyContent="space-between">
       {/* <Flex flexDirection="row" alignItems='center' justifyContent="space-between" width="100%" marginBottom={0}> */}
-        <Swap.CurrencyInputHeaderTitle>{title}</Swap.CurrencyInputHeaderTitle>
-        <Flex alignContent="center" style={{gap:5}} justifyContent="space-between">
-<Link href='/liquidity' marginRight={25}>
- <Text bold color="#000" fontSize={20}>{t('Liquidity')}</Text> 
-</Link>
+      <Swap.CurrencyInputHeaderTitle>{title}</Swap.CurrencyInputHeaderTitle>
+      <Flex alignContent="center" style={{ gap: 5 }} justifyContent="space-between">
+        <Link href="/liquidity" marginRight={25}>
+          <Text bold color="#000" fontSize={20}>
+            {t('Liquidity')}
+          </Text>
+        </Link>
         <NotificationDot show={expertMode}>
           <GlobalSettings mode={SettingsMode.SWAP_LIQUIDITY} />
         </NotificationDot>
         <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
           <HistoryIcon width="18px" />
         </IconButton>
-        <Link external small href='https://bscscan.com/address/0x3C44c79f7Eb465235b244e6500C3c0570D502e89'>
-        <IconButton variant="text" scale="sm" onClick={null}>
-          <LinkIcon width="20px" />
-        </IconButton>
+        <Link external small href="https://bscscan.com/address/0x3C44c79f7Eb465235b244e6500C3c0570D502e89">
+          <IconButton variant="text" scale="sm" onClick={null}>
+            <LinkIcon width="20px" />
+          </IconButton>
         </Link>
-        
-        </Flex>
+      </Flex>
       {/* </Flex> */}
       {/* <Flex justifyContent="start" width="100%" height="17px" alignItems="center" mb="14px">
         <Swap.CurrencyInputHeaderSubTitle>{subtitle}</Swap.CurrencyInputHeaderSubTitle>
@@ -172,6 +173,4 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
 
 export default CurrencyInputHeader
 
-const sss = styled.div`
-
-`
+const sss = styled.div``
