@@ -117,7 +117,7 @@
     {
       "name": "Tether USD",
       "symbol": "USDT",
-      "address": "0x19297aF63331472a65A511061aCa701c5a083124",
+      "address": "0xb6A7DEEd1cd4F07ba54ea91388466b04Af557d1E",
       "chainId": 97,
       "decimals": 18,
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
@@ -125,7 +125,7 @@
     {
       "name": "FDO Token",
       "symbol": "FDO",
-      "address": "0x82E1A17BC3A15E842Dd7F5fCbbBd661cFd2a5b06",
+      "address": "0xb6D1b54f82edB6CFc3569D5AD72bC8a567942B08",
       "chainId": 97,
       "decimals": 8,
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/busd.png"

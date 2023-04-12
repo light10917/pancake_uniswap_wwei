@@ -8,7 +8,7 @@ export const ROUTER_ADDRESS: ChainMap<string> = {
   [ChainId.GOERLI]: '0xEfF92A263d31888d860bD50809A8D171709b7b1c',
   [ChainId.BSC]: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
   // [ChainId.BSC_TESTNET]: '0xD99D1c33F9fC3444f8101754aBC46c52416550D1',
-  [ChainId.BSC_TESTNET]: '0xf89a148A1502BEb218a71eC29dac2347862b1bd6',
+  [ChainId.BSC_TESTNET]: '0x39C7a3EE33B939C1dD12C42C4432d73d5F7dDc6e',
 }
 
 // used to construct intermediary pairs for trading
@@ -106,7 +106,7 @@ export const INPUT_FRACTION_AFTER_FEE = ONE_HUNDRED_PERCENT.subtract(BASE_FEE)
 // BNB
 export const DEFAULT_INPUT_CURRENCY = 'BNB'
 // CAKE
-export const DEFAULT_OUTPUT_CURRENCY = '0x82E1A17BC3A15E842Dd7F5fCbbBd661cFd2a5b06'
+export const DEFAULT_OUTPUT_CURRENCY = '0xb6D1b54f82edB6CFc3569D5AD72bC8a567942B08'
 
 // Handler string is passed to Gelato to use PCS router
 export const GELATO_HANDLER = 'pancakeswap'

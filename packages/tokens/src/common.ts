@@ -11,7 +11,7 @@ export const CAKE_MAINNET = new ERC20Token(
 
 export const USDT_TESTNET= new ERC20Token(
   ChainId.BSC_TESTNET,
-  '0x19297aF63331472a65A511061aCa701c5a083124',
+  '0xb6A7DEEd1cd4F07ba54ea91388466b04Af557d1E',
   18,
   'CAKE',
   'PancakeSwap Token',
@@ -19,7 +19,7 @@ export const USDT_TESTNET= new ERC20Token(
 ) 
 export const CAKE_TESTNET = new ERC20Token(
   ChainId.BSC_TESTNET,
-  '0x82E1A17BC3A15E842Dd7F5fCbbBd661cFd2a5b06',
+  '0xb6D1b54f82edB6CFc3569D5AD72bC8a567942B08',
   8,
   'CAKE',
   'PancakeSwap Token',
@@ -89,7 +89,7 @@ export const BUSD_BSC = new ERC20Token(
 
 export const BUSD_TESTNET = new ERC20Token(
   ChainId.BSC_TESTNET,
-  '0x19297aF63331472a65A511061aCa701c5a083124',
+  '0xb6A7DEEd1cd4F07ba54ea91388466b04Af557d1E',
   18,
   'BUSD',
   'Binance USD',
